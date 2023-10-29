@@ -1,0 +1,188 @@
+body {
+  background: #222;
+  font-family: -apple-system, BlinkMacSystemFont, avenir next, avenir, segoe ui,
+    helvetica neue, helvetica, Ubuntu, roboto, noto, arial, sans-serif;
+  color: white;
+  font-size: 13px;
+}
+
+main {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  text-align: center;
+}
+
+.header {
+  height: 100px;
+  width: 92%;
+  margin-top: 10px;
+  border: 1px solid yellow;
+  border-radius: 20px;
+  padding: 5px;
+}
+
+li {
+  text-align: left;
+}
+
+img {
+  float: right;
+  padding: 5px;
+}
+
+.center {
+  text-align: center;
+}
+
+a {
+  color: white;
+  padding-left: 10px;
+  text-decoration: none;
+}
+
+a:hover {
+  color: #ffd733;
+}
+
+a:active {
+  color: yellow;
+}
+
+a:visited {
+  color: #ffd733;
+}
+
+.navbox {
+  position: relative;
+  margin-top: 60px;
+}
+
+h1 {
+  padding-top: 15px;
+  padding-bottom: 15px;
+  font-size: 2rem;
+}
+
+h2 {
+  padding-top: 5px;
+  padding-bottom: 15px;
+  font-size: 1rem;
+}
+
+input {
+  appearance: none;
+  -webkit-appearance: none;
+  border: 0;
+  font-size: 0.9rem;
+  background: #888;
+  padding: 1rem;
+  color: white;
+  cursor: pointer;
+}
+
+footer {
+  position: absolute;
+  bottom: 0;
+  height: 40px;
+  width: 92%;
+  border: 1px solid yellow;
+  border-radius: 20px;
+  padding: 9px;
+  margin-bottom: 10px;
+  margin-left: 5%;
+}
+
+.form-control {
+  display: block;
+  width: 100%;
+  height: 50px;
+  padding: 0.375rem 0.75rem;
+  font-size: 1.5rem;
+  font-weight: 400;
+  line-height: 1.5;
+  color: #212529;
+  background-color: #fff;
+  background-clip: padding-box;
+  border: 1px solid #ced4da;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  border-radius: 0.25rem;
+  transition: border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+}
+
+.form-check {
+  display: block;
+  min-height: 1rem;
+  padding-left: 1.5em;
+  margin-bottom: 0.125rem;
+}
+
+.floatright {
+  float: right;
+}
+
+.deleteButton {
+  background-image: url("/images/deleteicon.gif");
+  background-size: cover;
+  width: 15px;
+  height: 15px;
+  font-size: 2rem;
+}
+
+span {
+  text-align: left;
+  padding-left: 30px;
+}
+.container {
+  text-align: left;
+  width: 400px;
+  position: relative;
+  padding-left: 10px;
+  margin-bottom: 6px;
+  margin-left: 10%;
+  cursor: pointer;
+  color: white;
+  font-size: 14px;
+}
+/* Hide default browser checkbox */
+.container input[type="checkbox"] {
+  display: none;
+}
+/* Create checkbox - using ::before */
+.checkmark::before {
+  content: "";
+  height: 21px;
+  width: 21px;
+  background-color: yellow;
+  border: solid 1px #194263;
+  position: absolute;
+  left: 0;
+  top: 0;
+  margin-right: 10px;
+}
+/* Show a checkmark when checked */
+.container input:checked ~ .checkmark:after {
+  display: block;
+  left: 5px;
+  top: 5px;
+  width: 10px;
+  height: 10px;
+  border: solid #194263;
+  border-width: 0 3px 3px 0;
+  transform: rotate(45deg);
+  content: "";
+  position: absolute;
+  margin-right: 10px;
+}
+/* strike through text */
+.container input:checked ~ span {
+  text-decoration: line-through;
+  color: red;
+}

@@ -1,0 +1,5 @@
+1: Mow lawn
+3: Trim hair
+4: Clean room
+2: Buy milk & coffee
+4: Study coding

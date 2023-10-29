@@ -1,0 +1,4 @@
+1: Check emails
+2: Write code
+3: Upload new images
+4: Contact client

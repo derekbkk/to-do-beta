@@ -1,0 +1,36 @@
+<%- include("partials/header.ejs") %> <% const days =
+["Sunday","Monday","Tuesday","Wednesday","Thursday", "Friday","Saturday",] %> <%
+const months = ["January","February","March","April",
+"May","June","July","August","September","October","November","December"] %> <%
+const d = new Date(); %> <% const day = days[d.getDay()]; %> <% const date =
+d.getDate(); %> <% const month = months[d.getMonth()]; %> <% const year =
+d.getFullYear(); %>
+
+<h1>
+  Today's To-Do List&nbsp;
+  <a href="/" target="_self"
+    ><img
+      src="/images/plusicon.gif"
+      height="40px"
+      alt="Add a new task"
+      class="floatright"
+  /></a>
+</h1>
+<h2><%= day %>, <%= date %> ,<%= month %>, <%= year %></h2>
+
+<% if (items.length != 0) { %> <% for (let i=0;i<items.length;i++) { %>
+  <form action="/deleteTask" method="POST">
+    <input type="hidden" name="id" id="id" value="<%=i%>" />
+    <input type="hidden" name="listType" id="listType" value="today" />
+    <label class="container">
+      <input type="checkbox" />
+      <span><%= items[i] %></span>&nbsp;
+      <button type="submit" class="deleteButton" name="btn" id="btn"></button>
+      <span class="checkmark"></span>
+    </label>
+  </form>
+
+  <% } %> <% } else { %>
+  <p>No items to display</p>
+  <% } %> <%- include("partials/footer.ejs") %></items.length;i++)
+>

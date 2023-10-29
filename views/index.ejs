@@ -1,0 +1,32 @@
+<%- include("partials/header.ejs") %> <% if (locals.saved) { %> <br /><br />
+<h1>To Do List - Files are Saved</h1>
+<% } else { %>
+<br />
+<h1>&nbsp;To Do List</h1>
+<% } %>
+<p><p></p></p><p></p><p>&nbsp;What's your agenda?</p>
+<div>
+  
+  <form action="/submit" method="POST">
+    <label for="task" class="form-label">&nbsp;Task Description</label>
+    <input type="text" name="task" class="form-control" /><br />
+
+    <label for="listType" class="form-label">Today List&nbsp;</label>
+    <input
+      type="radio"
+      name="listType"
+      class="form-check-input"
+      value="today"
+    />&nbsp;
+  
+    <label for="listType" class="form-label">Work Stuff&nbsp;</label>
+    <input type="radio" name="listType" class="form-check-input" value="work" />
+
+    <p><br /><br /><br />
+    </div>
+  </div>
+    <button type="submit" class="btn btn-primary" name="submit">&nbsp;Submit</button>
+  </form></p></div>
+
+  <%- include("partials/footer.ejs") %>
+</div>
